@@ -113,9 +113,11 @@ h1 {
 
 .blue-color {
   background-color: rgb(79,	204,	222);
-  h4 {
+  h4,p {
     color: rgb(255,255,255);
-    @include center
+    text-align: center;
+    vertical-align: middle;
+    // @include center
   }
 
 
