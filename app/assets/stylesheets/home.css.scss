@@ -1,5 +1,6 @@
 $color-green: rgb(78,174,135);
-$color-green: rgb(78,174,135);
+$color-blue: rgb(79,	204,	222);
+
 
 
 
@@ -8,33 +9,14 @@ $color-green: rgb(78,174,135);
   padding-bottom: $radius;
 }
 
-@mixin center {
+@mixin center{
   text-align: center;
-}
-
-@mixin centerer {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-@mixin centerers {
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .nav {
   div {
     @include center;
   }
-
-}
-
-#bottom {
-  bottom: 0;
-  background-color: gray;
 }
 
 header {
@@ -45,55 +27,9 @@ h1 {
   @include center;
 }
 
-#canaryHeader {
-  @include padding(1cm);
-
-}
-
-#pics {
-
-  @include padding(1cm);
-
-}
-
-
-#greenFont {
+.greenFont {
   padding-top: 1cm;
-
   color: $color-green;
-
-}
-
-#row3 {
-  padding-top: 1cm;
-}
-
-
-
-#gray {
-  background-color: #F8F8F8;
-
-}
-
-.flex-container {
-    display: -webkit-flex;
-    display: flex;
-    width: 100px;
-    height: 250px;
-    border-style: solid;
-    border-width: 1px;
-    position: relative;
-
-  }
-
-.flex-item {
-
-  @include centerer;
-
-  p{
-    @include centerers;
-
-  }
 }
 
 @media screen and (max-width:480px) {
@@ -101,7 +37,7 @@ h1 {
     display: none;
   }
 
-  #canaryImg img {
+#canaryImg img {
     margin: 0 auto;
   }
 }
@@ -109,48 +45,64 @@ h1 {
 #insurance {
   @include padding(3cm);
   @include center;
+  color: gray;
 }
 
 .blue-color {
   background-color: rgb(79,	204,	222);
-  h4,p {
-    color: rgb(255,255,255);
-    text-align: center;
-    vertical-align: middle;
-    // @include center
-  }
+  min-height:300px;
+}
 
-
+.centerIt {
+    @include center;
 }
 
 .imgWidth {
-
   width:100%;
-
 }
 
 
-.row {
-  -webkit-flex-direction: row;  /* Safari */
-  flex-direction:  column;
-}
 
-.row-item {
-  // margin-left: 5px;
-  // margin-right: 5px;
-  border: 1px solid black;
-  display: flex;
-  justify-content: center; /* align horizontal */
-  align-items: center; /* align vertical */
-  justify-content: space-around;
+.gray{
+    background-color: #F8F8F8;
 
 }
 
-.align-right {
-  float: right;
-  color: rgb(151,	151,	151);
-}
+#shape {
+  width: 170px;
+  height: 50px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius:30px;
+  background: white;
+  text-align: center;
+  span {
+    color: $color-blue;
 
-.bottom-align-text {
-    bottom: 0;
   }
+}
+
+.insurance_boxes {
+  min-height:250px;
+  padding:4%;
+  border:1px solid black;
+  background-color: white;
+}
+
+.insurance_logos {
+  display:block;
+  text-align:center;
+  padding: 10px 0;
+}
+
+.details {
+  text-align:center;
+}
+
+.pad {
+  @include padding(1cm);
+}
+.white{
+  color: white;
+
+}
