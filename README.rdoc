@@ -2,3 +2,5 @@
 Code Challenge
 
 Utilized ruby on rails and twitter bootstrap to complete this challenge.
+To view the page, just open on a rails server ("rails s") in the terminal,
+and go to the following URL... http://localhost:3000/
